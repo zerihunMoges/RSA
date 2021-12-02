@@ -141,7 +141,7 @@ elif choice == '2':
     n = int((public_keysfile.readline()).split('public_n:')[1])
     e = int((public_keysfile.readline()).split('pulic_exponent:')[1])
 
-    file = input('enter file to be encrypted')
+    file = input('enter file(address) to be encrypted')
     encrypt(file, n, e)
 
 elif choice == '3':
@@ -151,5 +151,5 @@ elif choice == '3':
 
     n = int((public_keysfile.readline()).split('public_n:')[1])
 
-    file = input('enter file to be decrypted')
+    file = input('enter file(address) to be decrypted')
     decrypt(file, d,n)
