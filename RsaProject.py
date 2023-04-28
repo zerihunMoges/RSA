@@ -30,21 +30,18 @@ def genratepossibleprime(x,y):
 
     return randomnumber
 
-
 def lowest(base, exponent, n):
-
+    
+    rem = 1
     while exponent > 1:
-        rem = 1
-        while exponent > 1:
-            if exponent % 2 != 0:
-                rem *= base
-                rem %= n
-            base = (base ** 2) % n
+        if exponent % 2 != 0:
+            rem *= base
+            rem %= n
+        base = (base ** 2) % n
 
-            exponent = exponent // 2
-            if exponent == 1:
-                return (rem * base) % n
-
+        exponent = exponent // 2
+        if exponent == 1:
+            return (rem * base) % n
 
 def gcd(number_1, number_2):
     rem = number_1 % number_2
